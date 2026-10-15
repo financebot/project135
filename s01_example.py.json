@@ -1,0 +1,172 @@
+{
+  "_type": "Module",
+  "body": [
+    {
+      "_type": "Expr",
+      "value": {
+        "_type": "Constant",
+        "value": "s01_example.py - performs sum and multiplication, prints results.",
+        "kind": null
+      }
+    },
+    {
+      "_type": "Assign",
+      "targets": [
+        {
+          "_type": "Name",
+          "id": "a",
+          "ctx": {
+            "_type": "Store"
+          }
+        }
+      ],
+      "value": {
+        "_type": "Constant",
+        "value": 3,
+        "kind": null
+      },
+      "type_comment": null
+    },
+    {
+      "_type": "Assign",
+      "targets": [
+        {
+          "_type": "Name",
+          "id": "b",
+          "ctx": {
+            "_type": "Store"
+          }
+        }
+      ],
+      "value": {
+        "_type": "Constant",
+        "value": 5,
+        "kind": null
+      },
+      "type_comment": null
+    },
+    {
+      "_type": "Assign",
+      "targets": [
+        {
+          "_type": "Name",
+          "id": "sum_result",
+          "ctx": {
+            "_type": "Store"
+          }
+        }
+      ],
+      "value": {
+        "_type": "BinOp",
+        "left": {
+          "_type": "Name",
+          "id": "a",
+          "ctx": {
+            "_type": "Load"
+          }
+        },
+        "op": {
+          "_type": "Add"
+        },
+        "right": {
+          "_type": "Name",
+          "id": "b",
+          "ctx": {
+            "_type": "Load"
+          }
+        }
+      },
+      "type_comment": null
+    },
+    {
+      "_type": "Assign",
+      "targets": [
+        {
+          "_type": "Name",
+          "id": "mul_result",
+          "ctx": {
+            "_type": "Store"
+          }
+        }
+      ],
+      "value": {
+        "_type": "BinOp",
+        "left": {
+          "_type": "Name",
+          "id": "a",
+          "ctx": {
+            "_type": "Load"
+          }
+        },
+        "op": {
+          "_type": "Mult"
+        },
+        "right": {
+          "_type": "Name",
+          "id": "b",
+          "ctx": {
+            "_type": "Load"
+          }
+        }
+      },
+      "type_comment": null
+    },
+    {
+      "_type": "Expr",
+      "value": {
+        "_type": "Call",
+        "func": {
+          "_type": "Name",
+          "id": "print",
+          "ctx": {
+            "_type": "Load"
+          }
+        },
+        "args": [
+          {
+            "_type": "Constant",
+            "value": "Sum:",
+            "kind": null
+          },
+          {
+            "_type": "Name",
+            "id": "sum_result",
+            "ctx": {
+              "_type": "Load"
+            }
+          }
+        ],
+        "keywords": []
+      }
+    },
+    {
+      "_type": "Expr",
+      "value": {
+        "_type": "Call",
+        "func": {
+          "_type": "Name",
+          "id": "print",
+          "ctx": {
+            "_type": "Load"
+          }
+        },
+        "args": [
+          {
+            "_type": "Constant",
+            "value": "Multiplication:",
+            "kind": null
+          },
+          {
+            "_type": "Name",
+            "id": "mul_result",
+            "ctx": {
+              "_type": "Load"
+            }
+          }
+        ],
+        "keywords": []
+      }
+    }
+  ],
+  "type_ignores": []
+}
